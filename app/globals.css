@@ -1,10 +1,8 @@
 :root {
   --background: #02182a; 
   --background-pattern: url('/img/patterns/abstract-digital.webp');
-  /* Taille du motif : "cover" pour éviter la répétition et couvrir l'écran */
   --background-pattern-size: cover;
   --background-pattern-opacity: 0.45;
-  /* Position au centre pour un rendu homogène */
   --background-pattern-position: center;
 }
 
@@ -15,7 +13,7 @@ body {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--background);
@@ -23,6 +21,8 @@ body {
   min-height: 100vh;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  font-family: "Segoe UI",sans-serif;
+  font-weight: 400;
 }
 
 /* Masquage scrollbar pour WebKit */
@@ -60,4 +60,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+main {
+  min-height: 100vh;
+}

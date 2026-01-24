@@ -1,0 +1,155 @@
+/* Hero Section - Conteneur principal */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding-block: calc(env(safe-area-inset-top, 0px) + clamp(48px, 12vh, 160px))
+    calc(env(safe-area-inset-bottom, 0px) + clamp(32px, 10vh, 120px));
+  padding-inline: 16px;
+}
+
+/* Overlay assombrissant pour lisibilité sur le motif */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Contenu centré */
+.heroContent {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* Titre principal */
+.heroTitle {
+  font-size: clamp(28px, 6vw, 56px);
+  font-weight: 700;
+  margin-bottom: clamp(12px, 2.5vw, 24px);
+  line-height: 1.1;
+  letter-spacing: 0.005em;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Nom en surbrillance */
+.highlight {
+  color: #00eeff;
+  display: block;
+}
+
+/* Sous-titre */
+.heroSubtitle {
+  font-size: clamp(18px, 3.2vw, 28px);
+  font-weight: 400;
+  margin-bottom: clamp(12px, 2.5vw, 24px);
+  opacity: 0.9;
+  text-wrap: balance;
+}
+
+/* Variante: sous-titre en serif (Lora) */
+.heroSubtitleSerif {
+  font-weight: 600;
+  letter-spacing: 0.005em;
+}
+
+/* Description */
+.heroDescription {
+  /* font-size: clamp(16px, 2.6vw, 20px); */
+  margin-inline: auto;
+  margin-bottom: clamp(28px, 5vw, 52px);
+  opacity: 0.95;
+  line-height: 1.7;
+  max-width: 68ch;
+  font-style: italic;
+  letter-spacing: 0.105em;
+}
+
+/* Conteneur des boutons */
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2.2vw, 16px);
+}
+
+/* Style de base des boutons */
+.btn {
+  padding: 12px 20px;
+  min-height: 44px; /* cible tactile */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(16px, 2.5vw, 20px);
+  letter-spacing: 0.02em;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+  display: inline-block;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #9db4ff;
+  outline-offset: 2px;
+}
+
+/* Bouton principal */
+.btnPrimary {
+  background-color: white;
+  color: #3691b0;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton secondaire */
+.btnSecondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btnSecondary:hover {
+  background-color: white;
+  color: #3691b0;
+  transform: translateY(-2px);
+}
+
+/* Réduire les animations si l’utilisateur le demande */
+@media (prefers-reduced-motion: reduce) {
+  .btnPrimary:hover,
+  .btnSecondary:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* Responsive : mobile */
+@media (max-width: 768px) {
+  /* Overlay un peu plus fort pour renforcer le contraste sur mobile */
+  .hero::after {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .heroButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
