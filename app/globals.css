@@ -1,13 +1,6 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #02182a; 
+  --background-pattern: url('/img/patterns/points.png');
 }
 
 html,
@@ -17,11 +10,38 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
+  position: relative;
+  min-height: 100vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Masquage scrollbar pour WebKit */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Calque motif global avec opacité */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--background-pattern);
+  background-repeat: repeat;
+  background-size: var(--background-pattern-size);
+  opacity: var(--background-pattern-opacity, 0.08);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* S'assurer que le contenu passe au-dessus du calque motif */
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 * {
@@ -35,8 +55,3 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
