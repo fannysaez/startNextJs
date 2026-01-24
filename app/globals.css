@@ -1,9 +1,11 @@
 :root {
   --background: #02182a; 
-  --background-pattern: url('/img/patterns/abstrait.webp');
-  --background-pattern-size: 972px;
-  --background-pattern-opacity: 0.10;
-  --background-pattern-position: 0 0;
+  --background-pattern: url('/img/patterns/abstract-digital.webp');
+  /* Taille du motif : "cover" pour éviter la répétition et couvrir l'écran */
+  --background-pattern-size: cover;
+  --background-pattern-opacity: 0.45;
+  /* Position au centre pour un rendu homogène */
+  --background-pattern-position: center;
 }
 
 html,
@@ -34,10 +36,10 @@ body::before {
   position: fixed;
   inset: 0;
   background-image: var(--background-pattern);
-  background-repeat: repeat;
-  background-size: var(--background-pattern-size, auto);
-  background-position: var(--background-pattern-position, 0 0);
-  opacity: var(--background-pattern-opacity, 0.08);
+  background-repeat: no-repeat;
+  background-size: var(--background-pattern-size, cover);
+  background-position: var(--background-pattern-position, center);
+  opacity: var(--background-pattern-opacity, 0.45);
   z-index: 0;
   pointer-events: none;
 }
