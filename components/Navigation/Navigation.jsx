@@ -5,6 +5,9 @@ export default function Navigation() {
  return (
    <nav className={styles.nav}>
      <div className={styles.container}>
+       <Link href="/" className={styles.logo}>
+         Logo
+       </Link>
 
        <ul className={styles.menu}>
          <li>
@@ -17,9 +20,6 @@ export default function Navigation() {
              Projets
            </Link>
          </li>
-       <Link href="/" className={styles.logo}>
-         Logo
-       </Link>
          <li>
            <Link href="/a-propos" className={styles.link}>
              À propos
