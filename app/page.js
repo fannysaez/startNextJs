@@ -11,7 +11,9 @@ export default function Home() {
         <h1 className={styles.heroTitle}>
           Bonjour, je suis <span className={styles.highlight}>Fanny</span>
         </h1>
-        <p className={styles.heroSubtitle}>Développeuse Web Full-Stack</p>
+        <p className={styles.heroSubtitle}>
+          Développeuse Web Full-Stack
+        </p>
         <p className={styles.heroDescription}>
           Je crée des applications web modernes, performantes et accessibles, en
           alliant technique, design et expérience utilisateur.
