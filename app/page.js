@@ -2,14 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Tag from "@/components/Tag/Tag";
 
-const skills = [
-  "React",
-  "Node.js",
-  "Next.js",
-  "JavaScript",
-  "Modules CSS",
-];
-
+const skills = ["React", "Node.js", "Next.js", "JavaScript", "Modules CSS"];
 
 export default function Home() {
   return (
@@ -18,12 +11,10 @@ export default function Home() {
         <h1 className={styles.heroTitle}>
           Bonjour, je suis <span className={styles.highlight}>Fanny</span>
         </h1>
-        <p className={styles.heroSubtitle}>
-          Développeuse Web Full-Stack
-        </p>
+        <p className={styles.heroSubtitle}>Développeuse Web Full-Stack</p>
         <p className={styles.heroDescription}>
-          Je crée des applications web modernes, performantes et accessibles
-          avec différentes technologies, frameworks ainsi que des outils..
+          Je crée des applications web modernes, performantes et accessibles, en
+          alliant technique, design et expérience utilisateur.
         </p>
         <div className={styles.heroButtons}>
           <a href="#projects" className={`${styles.btn} ${styles.btnPrimary}`}>
@@ -40,5 +31,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }
