@@ -23,7 +23,7 @@ export default function Home() {
         </p>
         <p className={styles.heroDescription}>
           Je crée des applications web modernes, performantes et accessibles
-          avec différentes technologies & frameworks.
+          avec différentes technologies, frameworks ainsi que des outils..
         </p>
         <div className={styles.heroButtons}>
           <a href="#projects" className={`${styles.btn} ${styles.btnPrimary}`}>
