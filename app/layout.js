@@ -15,8 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${jetbrainsMono.variable}`} style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
-        {children}
+      <body suppressHydrationWarning className={`${jetbrainsMono.variable}`} style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
+        <main>{children}</main>
       </body>
     </html>
   );
