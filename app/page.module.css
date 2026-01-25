@@ -88,7 +88,13 @@
   color: #07a7bd;
   transform: translateY(-2px);
 }
-
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
 /* Responsive : mobile */
 @media (max-width: 768px) {
   .heroTitle {

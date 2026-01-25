@@ -1,5 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Tag from "@/components/Tag/Tag";
+
+const skills = [
+  "React",
+  "Node.js",
+  "Next.js",
+  "JavaScript",
+  "Modules CSS",
+];
+
 
 export default function Home() {
   return (
@@ -22,6 +32,11 @@ export default function Home() {
           <a href="#contact" className={`${styles.btn} ${styles.btnSecondary}`}>
             Me contacter
           </a>
+        </div>
+        <div className={styles.tagsContainer}>
+          {skills.map((skill) => (
+            <Tag key={skill}>{skill}</Tag>
+          ))}
         </div>
       </div>
     </div>
