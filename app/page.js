@@ -8,9 +8,6 @@ export default function Home() {
   return (
     <div className={styles.hero}>
       <div className={styles.heroContent}>
-        <h1 className={styles.heroTitle}>
-          Bonjour, je suis <span className={styles.highlight}>Fanny</span>
-        </h1>
         <p className={styles.heroSubtitle}>
           Développeuse Web Full-Stack
         </p>

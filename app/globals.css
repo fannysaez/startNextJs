@@ -2,7 +2,7 @@
   --background: #02182a; 
   --background-pattern: url('/img/patterns/abstract-digital.webp');
   --background-pattern-size: cover;
-  --background-pattern-opacity: 0.45;
+  --background-pattern-opacity: 0.55;
   --background-pattern-position: center;
 }
 
@@ -10,6 +10,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
@@ -38,7 +39,7 @@ body::before {
   background-repeat: no-repeat;
   background-size: var(--background-pattern-size, cover);
   background-position: var(--background-pattern-position, center);
-  opacity: var(--background-pattern-opacity, 0.45);
+  opacity: var(--background-pattern-opacity, 0.55);
   z-index: 0;
   pointer-events: none;
 }

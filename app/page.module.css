@@ -15,22 +15,22 @@
 }
 
 /* Titre principal */
-.heroTitle {
+/* .heroTitle {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
-}
+} */
 
 /* Nom en surbrillance */
-.highlight {
+/* .highlight {
   color: #07a7bd;
   display: block;
-}
+} */
 
 /* Sous-titre */
 .heroSubtitle {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
   opacity: 0.9;
@@ -41,7 +41,7 @@
   font-size: 1.005rem;
   margin-bottom: 2.5rem;
   opacity: 0.85;
-  line-height: 1.8;
+  line-height: 2;
   font-family: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
   font-weight: 200;
 }
@@ -95,7 +95,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  line-height: 1.2;
 }
 /* Responsive : mobile */
 @media (max-width: 768px) {
