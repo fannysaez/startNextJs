@@ -1,3 +1,7 @@
-export default function Projets() {
-	return <div>Page Projets</div>;
+export default function Projects() {
+  return (
+    <div>
+      {/* Ton contenu ici */}
+    </div>
+  );
 }
