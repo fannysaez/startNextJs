@@ -1,7 +1,47 @@
+import styles from './page.module.css'
+import Tag from '@/components/Tag/Tag'
+
 export default function Projects() {
   return (
-    <div>
-      {/* Ton contenu ici */}
-    </div>
-  );
+    <>
+      <div className={`${styles['projets-hero']} ${styles.container}`}>
+        <h1 className={styles.title}>Mes Projets</h1>
+        <p className={styles.description}>
+          Découvrez les projets sur lesquels j&apos;ai travaillé
+        </p>
+      </div>
+
+      <div className={styles.grid}>
+        <div className={`${styles.card} ${styles.cardSecondary}`}>
+          <h2>Portfolio Personnel</h2>
+          <p>Site web moderne construit avec Next.js</p>
+          <div className={styles.tags}>
+            <Tag>Next.js</Tag>
+            <Tag>React</Tag>
+            <Tag>CSS Modules</Tag>
+          </div>
+        </div>
+
+        <div className={`${styles.card} ${styles.cardSecondary}`}>
+          <h2>App E-commerce</h2>
+          <p>Application de vente en ligne avec panier</p>
+          <div className={styles.tags}>
+            <Tag>React</Tag>
+            <Tag>Node.js</Tag>
+            <Tag>MongoDB</Tag>
+          </div>
+        </div>
+
+        <div className={`${styles.card} ${styles.cardSecondary}`}>
+          <h2>Blog Technique</h2>
+          <p>Blog personnel sur le développement web</p>
+          <div className={styles.tags}>
+            <Tag>Next.js</Tag>
+            <Tag>Markdown</Tag>
+            <Tag>SEO</Tag>
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }

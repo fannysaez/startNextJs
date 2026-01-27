@@ -1,9 +1,10 @@
 :root {
-  --background: #02182a; 
-  --background-pattern: url('/img/patterns/abstract-digital.webp');
+  --background: #02182a;
+  --background-pattern: url("/img/patterns/abstract-digital.webp");
   --background-pattern-size: cover;
   --background-pattern-opacity: 0.55;
   --background-pattern-position: center;
+  --projects-max-width: 1200px;
 }
 
 html,
@@ -23,7 +24,8 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 400;}
+  font-weight: 400;
+}
 
 /* Masquage scrollbar pour WebKit */
 body::-webkit-scrollbar {
@@ -62,4 +64,10 @@ a {
 }
 main {
   min-height: 100vh;
+}
+
+/* Styles globaux pour la section Projets (titre / description) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
