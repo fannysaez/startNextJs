@@ -25,6 +25,12 @@ export default function Navigation() {
            </Link>
          </li>
          <li>
+           <Link href="/parcours" className={pathname === '/parcours' ? `${styles.link} ${styles.active}` : styles.link}>
+             Parcours
+           </Link>
+         </li>
+
+         <li>
            <Link href="/a-propos" className={pathname === '/a-propos' ? `${styles.link} ${styles.active}` : styles.link}>
              À propos
            </Link>
