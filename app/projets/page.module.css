@@ -5,13 +5,11 @@
 }
 
 .card {
-  /* background: rgb(255, 255, 255); */
+  background: rgb(255, 255, 255);
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -82,7 +80,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 4rem 2rem;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -109,12 +107,12 @@
 
 /* Contenu détaillé des pages portfolio (aligné/justifié) */
 .contenu {
+  font-family: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.95);
   text-align: justify;
   margin: 0 0 2rem 0;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
-  font-weight: 200;
-  line-height: 1.6;
 }
 
 /* Bouton secondaire (copié depuis app/page.module.css pour uniformité) */

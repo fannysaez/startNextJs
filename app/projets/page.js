@@ -32,18 +32,29 @@ export default function Projects() {
         </Link>
 
         <div className={`${styles.card} ${styles.cardSecondary}`}>
-          <h2>App E-commerce</h2>
-          <p>Application de vente en ligne avec panier</p>
+          <h2>CV en ligne</h2>
+          <p className={`${styles.contenu} ${styles.cardDescription}`}>
+            Création de mon cv interactif en ligne, développé en HTML, CSS et
+            JavaScript. Ce projet vise à présenter mon parcours professionnel,
+            mes compétences ainsi que différents projets réalisés en
+            autodidacte, de manière dynamique et attrayante, durant ma formation
+            de DWWM à Simplon de 10 mois.
+          </p>
           <div className={styles.tags}>
-            <Tag>React</Tag>
-            <Tag>Node.js</Tag>
-            <Tag>MongoDB</Tag>
+            <Tag>HTML5</Tag>
+            <Tag>CSS3</Tag>
+            <Tag>JavaScript</Tag>
           </div>
         </div>
 
         <div className={`${styles.card} ${styles.cardSecondary}`}>
-          <h2>Blog Technique</h2>
-          <p>Blog personnel sur le développement web</p>
+          <h2>App Bien-être & Formations</h2>
+          <p className={`${styles.contenu} ${styles.cardDescription}`}>
+            Projet Final réalisé lors de mon stage de 10 semaines en Freelance
+            dans le cadre de la formation 'DWWM', à Simplon Clermont-Ferrand
+            (63) pour le Titre Professionnel de Développeuse Web & Web Mobile
+            (RNCP) obtenu le 20 Octobre 2025, équivalent d'un Bac+2 ~ BTS
+          </p>
           <div className={styles.tags}>
             <Tag>Next.js</Tag>
             <Tag>Markdown</Tag>
