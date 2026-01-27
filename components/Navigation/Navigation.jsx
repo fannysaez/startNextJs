@@ -10,7 +10,7 @@ export default function Navigation() {
    <nav className={styles.nav}>
      <div className={styles.container}>
        <Link href="/" className={styles.logo}>
-         Logo
+         {/* Logo */}
        </Link>
 
        <ul className={styles.menu}>

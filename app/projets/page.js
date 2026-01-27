@@ -1,10 +1,11 @@
-import styles from './page.module.css'
-import Tag from '@/components/Tag/Tag'
+import styles from "./page.module.css";
+import Link from "next/link";
+import Tag from "@/components/Tag/Tag";
 
 export default function Projects() {
   return (
     <>
-      <div className={`${styles['projets-hero']} ${styles.container}`}>
+      <div className={`${styles["projets-hero"]} ${styles.container}`}>
         <h1 className={styles.title}>Mes Projets</h1>
         <p className={styles.description}>
           Découvrez les projets sur lesquels j&apos;ai travaillé
@@ -12,15 +13,23 @@ export default function Projects() {
       </div>
 
       <div className={styles.grid}>
-        <div className={`${styles.card} ${styles.cardSecondary}`}>
-          <h2>Portfolio Personnel</h2>
-          <p>Site web moderne construit avec Next.js</p>
-          <div className={styles.tags}>
-            <Tag>Next.js</Tag>
-            <Tag>React</Tag>
-            <Tag>CSS Modules</Tag>
+        <Link href="/projets/portfolio" className={styles.cardLink}>
+          <div className={`${styles.card} ${styles.cardSecondary}`}>
+            <h2>1er Portfolio</h2>
+            <p className={`${styles.contenu} ${styles.cardDescription}`}>
+              Mon premier portfolio, réalisé en deux semaines en juillet 2024,
+              est né après avoir suivi une formation gratuite sur "Le Réacteur".
+              Je l'enrichis depuis lors avec chaque nouvelle technologie et
+              projet découverts pendant ma formation chez Simplon à
+              Clermont-Ferrand.
+            </p>
+            <div className={styles.tags}>
+              <Tag>HTML5</Tag>
+              <Tag>CSS3</Tag>
+              <Tag>JavaScript</Tag>
+            </div>
           </div>
-        </div>
+        </Link>
 
         <div className={`${styles.card} ${styles.cardSecondary}`}>
           <h2>App E-commerce</h2>
@@ -43,5 +52,5 @@ export default function Projects() {
         </div>
       </div>
     </>
-  )
+  );
 }

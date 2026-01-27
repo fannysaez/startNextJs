@@ -16,7 +16,7 @@ export default function Home() {
           alliant technique, design et expérience utilisateur.
         </p>
         <div className={styles.heroButtons}>
-          <a href="#projects" className={`${styles.btn} ${styles.btnPrimary}`}>
+          <a href="/projets" className={`${styles.btn} ${styles.btnPrimary}`}>
             Voir mes projets
           </a>
           <a href="#contact" className={`${styles.btn} ${styles.btnSecondary}`}>
