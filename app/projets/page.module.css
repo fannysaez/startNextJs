@@ -115,6 +115,11 @@
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
 
+/* Classe utilitaire pour centrer le texte quand nécessaire */
+.centerText {
+  text-align: center;
+}
+
 /* Bouton secondaire (copié depuis app/page.module.css pour uniformité) */
 .btnSecondary {
   background-color: transparent;
