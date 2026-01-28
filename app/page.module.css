@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 2rem;
+  min-height: 70vh;
+  padding: 2rem 2rem 1.25rem;
 }
 
 /* Contenu centré */
@@ -81,7 +81,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 1.25rem;
   line-height: 1.2;
 }
 /* Responsive : mobile */
