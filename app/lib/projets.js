@@ -1,3 +1,4 @@
+// app/lib/projets.js
 export const projets = {
   portfolio: {
     title: 'Portfolio Personnel',
@@ -26,4 +27,24 @@ export const projets = {
     github: 'https://github.com/votre-username/freelance',
     demo: 'https://freelance-demo.example.com'
   }
+  
+}
+
+
+// Utilitaire pour retrouver un projet par son `slug`
+export function getProjetBySlug(slug) {
+  if (!slug && slug !== 0) return undefined
+
+  // Si `slug` est un tableau (cas improbable), prendre le premier élément
+  const raw = Array.isArray(slug) ? slug[0] : slug
+
+  // Normaliser: décoder et enlever slashes éventuels
+  const norm = String(raw).replace(/^\/*|\/*$/g, '')
+
+  // Chercher par propriété `slug`
+  const bySlug = Object.values(projets).find(p => p.slug === norm)
+  if (bySlug) return bySlug
+
+  // Au cas où on reçoit la clé de l'objet (ex: 'portfolio', 'cvEnLigne')
+  return projets[norm] || undefined
 }

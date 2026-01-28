@@ -1,17 +1,21 @@
 import styles from '../page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import { projets } from '../../lib/projets'
+import Tag from '@/components/Tag/Tag'
+import { getProjetBySlug } from '../../lib/projets'
 
-export default function ProjetDetail({ params }) {
-  const { slug } = params
-  const projet = projets[slug] || Object.values(projets).find(p => p.slug === slug)
+export default async function ProjetDetail({ params }) {
+  const { slug } = await params   // ✅ OBLIGATOIRE en Next 16
+
+  const projet = getProjetBySlug(slug)
 
   if (!projet) {
     return (
       <div className={styles.container}>
         <h1 className={styles.title}>Projet non trouvé</h1>
-        <p className={`${styles.contenu} ${styles.centerText}`}>Ce projet n'existe pas ou a été supprimé.</p>
+        <p className={`${styles.contenu} ${styles.centerText}`}>
+          Ce projet n'existe pas ou a été supprimé.
+        </p>
         <Link href="/projets" className={styles.btnSecondary}>
           Retour aux projets
         </Link>
@@ -22,8 +26,12 @@ export default function ProjetDetail({ params }) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1 className={`${styles.title} ${styles.centerText}`}>{projet.title}</h1>
-        <p className={`${styles.contenu} ${styles.centerText}`}>{projet.description}</p>
+        <h1 className={`${styles.title} ${styles.centerText}`}>
+          {projet.title}
+        </h1>
+        <p className={`${styles.contenu} ${styles.centerText}`}>
+          {projet.description}
+        </p>
       </div>
 
       <div className={styles.content}>
@@ -38,15 +46,17 @@ export default function ProjetDetail({ params }) {
               priority
             />
           ) : (
-            <div className={styles.imagePlaceholder}>Image du projet</div>
+            <div className={styles.imagePlaceholder}>
+              Image du projet
+            </div>
           )}
         </div>
 
         <div className={styles.details}>
           <h2>Technologies utilisées</h2>
           <div className={styles.technologies}>
-            {projet.technologies.map((tech, idx) => (
-              <span key={idx} className={styles.tech}>
+            {projet.technologies.map((tech) => (
+              <span key={tech} className={styles.tech}>
                 {tech}
               </span>
             ))}
