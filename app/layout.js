@@ -1,6 +1,6 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation/Navigation";
+import Navigation from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
 const jetbrainsMono = JetBrains_Mono({

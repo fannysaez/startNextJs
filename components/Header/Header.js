@@ -1,9 +1,10 @@
 'use client'
+// import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import styles from './Navigation.module.css'
+import styles from './Header.module.css'
 
-export default function Navigation() {
+export default function Header() {
    const pathname = usePathname()
 
  return (
@@ -20,6 +21,11 @@ export default function Navigation() {
            </Link>
          </li>
          <li>
+           <Link href="/a-propos" className={pathname === '/a-propos' ? `${styles.link} ${styles.active}` : styles.link}>
+             À propos
+           </Link>
+         </li>
+         <li>
            <Link href="/projets" className={pathname === '/projets' ? `${styles.link} ${styles.active}` : styles.link}>
              Projets
            </Link>
@@ -30,11 +36,6 @@ export default function Navigation() {
            </Link>
          </li>
 
-         <li>
-           <Link href="/a-propos" className={pathname === '/a-propos' ? `${styles.link} ${styles.active}` : styles.link}>
-             À propos
-           </Link>
-         </li>
          <li>
            <Link href="/contact" className={pathname === '/contact' ? `${styles.link} ${styles.active}` : styles.link}>
              Contact
