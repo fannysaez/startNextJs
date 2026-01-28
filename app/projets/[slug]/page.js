@@ -1,10 +1,11 @@
-import styles from './page.module.css'
+import styles from '../page.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import { projets } from '../../lib/projets'
 
 export default function ProjetDetail({ params }) {
   const { slug } = params
-  const projet = projets[slug]
+  const projet = projets[slug] || Object.values(projets).find(p => p.slug === slug)
 
   if (!projet) {
     return (
@@ -27,7 +28,18 @@ export default function ProjetDetail({ params }) {
 
       <div className={styles.content}>
         <div className={styles.imageWrapper}>
-          <div className={styles.imagePlaceholder}>Image du projet</div>
+          {projet.image ? (
+            <Image
+              src={projet.image}
+              alt={projet.title}
+              width={1200}
+              height={700}
+              className={styles.projectImage}
+              priority
+            />
+          ) : (
+            <div className={styles.imagePlaceholder}>Image du projet</div>
+          )}
         </div>
 
         <div className={styles.details}>
@@ -47,7 +59,7 @@ export default function ProjetDetail({ params }) {
               rel="noopener noreferrer"
               className={styles.link}
             >
-              Voir le code →
+              Voir le code
             </a>
             <a
               href={projet.demo}
@@ -55,7 +67,7 @@ export default function ProjetDetail({ params }) {
               rel="noopener noreferrer"
               className={`${styles.link} ${styles.linkPrimary}`}
             >
-              Voir la démo →
+              Voir la démo
             </a>
           </div>
         </div>

@@ -3,7 +3,7 @@ export const projets = {
     title: 'Portfolio Personnel',
     slug: 'portfolio',
     description:
-      "Mon premier portfolio a été réalisé en juillet 2024 en seulement deux semaines. Il est mis à jour régulièrement pour intégrer de nouvelles technologies et projets.",
+      "Mon premier porfolio à été réalisé en Juillet 2024 en seulement deux semaines, après avoir suivi une formation gratuite 'Le Réacteur' (HTML5, CSS3, JavaScript). Depuis, je mets à jour régulièrement pour y intégrer les nouvelles technologies et les projets réalisés durant ma formation chez Simplon à Clermont-Ferrand.",
     technologies: ['HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/votre-username/portfolio',
     demo: 'https://votre-site-demo.example.com'

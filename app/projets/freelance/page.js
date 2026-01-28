@@ -1,5 +1,7 @@
 import styles from '../page.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
+import Tag from "@/components/Tag/Tag";
 import { projets } from '../../lib/projets'
 
 export default function Freelance() {
@@ -21,17 +23,33 @@ export default function Freelance() {
 		<div className={styles.container}>
 			<h1 className={`${styles.title} ${styles.centerText}`}>{projet.title}</h1>
 			<p className={`${styles.contenu} ${styles.centerText}`}>{projet.description}</p>
-			<div className={styles.technologies}>
-				{projet.technologies.map((t, i) => (
-					<span key={i} className={styles.tech}>{t}</span>
+			{projet.image ? (
+				<div className={styles.imageWrapper}>
+					<Image
+						src={projet.image}
+						alt={projet.title}
+						width={1200}
+						height={700}
+						className={styles.projectImage}
+						priority
+					/>
+				</div>
+			) : (
+				<div className={styles.imageWrapper}>
+					<div className={styles.imagePlaceholder}>Image du projet</div>
+				</div>
+			)}
+			<div className={styles.tagsContainer}>
+				{projet.technologies.map((skill) => (
+					<Tag key={skill}>{skill}</Tag>
 				))}
 			</div>
-			<div style={{marginTop: '1.25rem'}}>
+			<div className={styles.links}>
 				<a href={projet.github} target="_blank" rel="noopener noreferrer" className={styles.link}>
-					Voir le code →
+					Voir le code
 				</a>
-				<a href={projet.demo} target="_blank" rel="noopener noreferrer" className={`${styles.link} ${styles.linkPrimary}`} style={{marginLeft: '0.75rem'}}>
-					Voir la démo →
+				<a href={projet.demo} target="_blank" rel="noopener noreferrer" className={`${styles.link} ${styles.linkPrimary}`}>
+					Voir la démo
 				</a>
 			</div>
 
