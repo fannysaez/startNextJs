@@ -1,5 +1,5 @@
+import { notFound } from 'next/navigation'
+
 export default function APropos() {
-	return <div>
-		
-	</div>;
+  notFound() // provoque le rendu de app/not-found.js
 }

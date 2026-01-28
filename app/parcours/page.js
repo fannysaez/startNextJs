@@ -1,7 +1,4 @@
+import { notFound } from 'next/navigation'
 export default function Parcours() {
-  return (
-    <div>
-      {/* Ton contenu ici */}
-    </div>
-  );
+  notFound() // provoque le rendu de app/not-found.js
 }
