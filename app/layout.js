@@ -1,6 +1,7 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation/Navigation";
+import Footer from "@/components/Footer/Footer";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning className={`${jetbrainsMono.variable}`} style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
         <Navigation />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
