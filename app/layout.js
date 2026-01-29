@@ -19,7 +19,10 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body suppressHydrationWarning className={`${jetbrainsMono.variable}`} style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
         <Navigation />
-        <main>{children}</main>
+        <main className="site-main">
+          <div className="main-overlay" aria-hidden="true" />
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

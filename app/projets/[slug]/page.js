@@ -54,11 +54,9 @@ export default async function ProjetDetail({ params }) {
 
         <div className={styles.details}>
           <h2>Technologies utilisées</h2>
-          <div className={styles.technologies}>
+          <div className={`${styles.tagsContainer} ${styles.centerText}`}>
             {projet.technologies.map((tech) => (
-              <span key={tech} className={styles.tech}>
-                {tech}
-              </span>
+              <Tag key={tech}>{tech}</Tag>
             ))}
           </div>
 
