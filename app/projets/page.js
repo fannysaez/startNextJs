@@ -20,7 +20,7 @@ export default function Projets() {
           <Link key={p.slug} href={`/projets/${p.slug}`} className={styles.cardLink}>
             <div className={`${styles.card} ${styles.cardSecondary}`}>
               <h2>{p.title}</h2>
-              <p className={`${styles.contenu} ${styles.cardDescription}`}>
+              <p className={`${styles.contenus} ${styles.cardDescription}`}>
                 {p.description}
               </p>
               <div className={styles.tags}>

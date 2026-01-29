@@ -1,4 +1,4 @@
-import styles from '../page.module.css'
+import styles from './projetsDetails.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import Tag from '@/components/Tag/Tag'
@@ -29,7 +29,7 @@ export default async function ProjetDetail({ params }) {
         <h1 className={`${styles.title} ${styles.centerText}`}>
           {projet.title}
         </h1>
-        <p className={`${styles.contenu} ${styles.centerText}`}>
+        <p className={`${styles.contenu} ${styles.alignContenu}`}>
           {projet.description}
         </p>
       </div>
