@@ -23,7 +23,7 @@ export const projets = {
     slug: 'freelance',
     description:
       "Application Bien-Être & Formations est un projet final que j'ai réalisé en tant que freelance pendant mon stage de 2.5 mois.",
-    technologies: ['Markdown', 'Next.js', 'SEO'],
+    technologies: ['Next.js', 'React', 'SEO','Markdown'],
     github: 'https://github.com/votre-username/freelance',
     demo: 'https://freelance-demo.example.com'
   }
